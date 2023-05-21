@@ -1,0 +1,69 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite">
+    <parameter name="browser" value="firefox" />
+    <test name="Regression Test in chrome">
+        <classes>
+            <class name="tests.AddToCartTest">
+                <methods>
+                    <include name="navigateToSearchPage"/>
+                    <include name="searchForProduct"/>
+                    <include name="addProductToCart"/>
+                </methods>
+            </class>
+            <class name="tests.CustomTest">
+                <methods>
+                    <include name="navigateToCustomPage"/>
+                    <include name="customAnProduct"/>
+                    <include name="addCustomProductToCart"/>
+                </methods>
+            </class>
+            <class name="tests.IncreaseProductQuantityTest">
+                <methods>
+                    <include name="navigateToSearchPage"/>
+                    <include name="searchForProduct"/>
+                    <include name="addProductToCart"/>
+                    <include name="IncreaseByOne"/>
+                    <include name="increaseByTow"/>
+                </methods>
+            </class>
+            <class name="tests.LoginTest">
+                <methods>
+                    <include name="NavigateToCreateAccount"/>
+                    <include name="enterUserData"/>
+                    <include name="RegisterAssertion"/>
+                    <include name="logOut"/>
+                    <include name="navigateToLoginAndLogin"/>
+                </methods>
+            </class>
+            <class name="tests.RegisterTest">
+                <methods>
+                    <include name="NavigateToCreateAccount"/>
+                    <include name="enterUserData"/>
+                    <include name="RegisterAssertion"/>
+                </methods>
+            </class>
+            <class name="tests.RemoveItemTest">
+                <methods>
+                    <include name="navigateToSearchPage"/>
+                    <include name="searchForProduct"/>
+                    <include name="addProductToCart"/>
+                    <include name="removeItemFromCart"/>
+                </methods>
+            </class>
+            <class name="tests.SearchTest">
+                <methods>
+                    <include name="navigateToSearchPage"/>
+                    <include name="searchForProduct"/>
+                    <include name="navigateToSearchPageAgain"/>
+                    <include name="searchForAnotherProduct"/>
+                </methods>
+            </class>
+            <class name="tests.ShopTest">
+                <methods>
+                    <include name="HoverOverRings"/>
+                    <include name="HoverOverEngravable"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
